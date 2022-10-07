@@ -1,4 +1,4 @@
-package week2;
+package week5;
 public class PlayMarbles {
     static Child child_1 =new Child(15);
     static Child child_2 =new Child(9);

@@ -1,6 +1,13 @@
-
-public class point {
+public class Point {
     private int x,y;
+    public Point(){//초기화
+        x=0;
+        y=0;
+    }
+    public Point(int a, int b){
+        x=a;
+        y=b;
+    }
     public void setXY(int a,int b) {
         x=a;
         y=b;
@@ -12,6 +19,6 @@ public class point {
         return y;
     }
     public void show(){
-        System.out.println("x의 좌표는 : "+x+"y의 좌표는 : "+y);
+        System.out.printf("현재 x,y의 좌표는 (%d,%d)\n",x,y);
     }
 }

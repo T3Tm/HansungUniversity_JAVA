@@ -1,4 +1,4 @@
-package week2;
+package week5;
 public class Child {
     private int marble;
     Child(){//아무것도 안 넣었을 때는 0

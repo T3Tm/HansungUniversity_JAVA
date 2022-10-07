@@ -1,11 +1,19 @@
 public class Rectangle {
-    point left_top;
-    point Right_bottom;
+    Point left_top=new Point();
+    Point Right_bottom=new Point();
     Rectangle(){
-        left_top=new point();
-        Right_bottom=new point();
+        left_top=new Point(0,0);
+        Right_bottom=new Point(0,0);
     }
-    public int getReactangleference(){
+    Rectangle(Point a,Point b){
+        left_top=a;
+        Right_bottom=b;
+    }
+    Rectangle(int a,int b, int c, int d){
+        left_top.setXY(a, b);
+        Right_bottom.setXY(c, d);
+    }
+    public int getCircumference(){
         int left_x1=left_top.getx();
         int left_y1=left_top.gety();
         int right_x2=Right_bottom.getx();
@@ -26,9 +34,7 @@ public class Rectangle {
         return Right_bottom.gety()-left_top.gety();
     }
     public void show(){
-        System.out.println("현재 left_top x의 좌표는 : "+left_top.getx());
-        System.out.println("현재 left_top y의 좌표는 : "+left_top.gety());
-        System.out.println("현재 Right_bottom x의 좌표는 : "+Right_bottom.getx());
-        System.out.println("현재 Right_bottom y의 좌표는 : "+Right_bottom.gety());
+        System.out.print("[직사각형 "+Right_bottom.getx()+"x"+Right_bottom.gety());
+        System.out.println(": ("+left_top.getx()+", "+left_top.gety()+"), ("+Right_bottom.getx()+", "+Right_bottom.gety()+")]");
     }
 }
